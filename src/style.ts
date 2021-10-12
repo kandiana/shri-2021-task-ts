@@ -1,6 +1,8 @@
 import { color } from './colors';
 import { markdown } from './md';
-export function style(text, options) {
+import type { StylesOptions } from './colors';
+import type { FontEffectsOptions } from './md';
+export function style(text: string, options: StylesOptions | FontEffectsOptions): string {
     if (text.length === 0) {
         return text;
     }

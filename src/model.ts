@@ -26,7 +26,10 @@ export const backgroundColors = {
     cyan: '\x1b[46m',
     white: '\x1b[47m',
 };
-export const contrast = {
+export type Contrast = {
+    [Font in keyof typeof fontColors]: keyof typeof backgroundColors;
+};
+export const contrast: Contrast = {
     black: 'white',
     red: 'black',
     green: 'black',

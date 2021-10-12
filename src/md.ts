@@ -1,5 +1,11 @@
 import { color } from './colors';
-export function markdown(text, options) {
+export type FontEffectsOptions = {
+    bold?: boolean;
+    italic?: boolean;
+    mono?: boolean;
+    link?: string;
+};
+export function markdown(text: string, options: FontEffectsOptions): string {
     let result = text;
     if (options) {
         if (options.bold) {
